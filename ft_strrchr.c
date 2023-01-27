@@ -17,7 +17,6 @@ char	*ft_strrchr(const char *s, int c)
 	return (NULL);
 }
 
-
 // int	main()
 // {
 // 	printf("%s\n", strrchr("1234537", '3'));
