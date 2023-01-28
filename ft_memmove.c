@@ -1,5 +1,5 @@
 #include<libc.h>
-// #include "libft.h"
+#include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
@@ -8,14 +8,13 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 
 	d_cpy = (unsigned char *)dst;
 	s_cpy = (const unsigned char *)src;
-	if (d_cpy == NULL && s_cpy == NULL)
+	if (!d_cpy && !s_cpy)
 		return (NULL);
-	if (d_cpy > s_cpy)
-		while (len--)
-			d_cpy[len] = s_cpy[len];
+	if (d_cpy < s_cpy)
+		return (ft_memcpy(dst, src, len));
 	else
 		while (len--)
-			*d_cpy++ = *s_cpy++;
+			d_cpy[len] = s_cpy[len];
 	return (dst);
 }
 

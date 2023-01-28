@@ -2,44 +2,43 @@
 #include<limits.h>
 
 
-// int	over_flow(const char *str, int minus)
-// {
-// 	int		total;
-// 	long	tmp;
+int	over_flow(const char *str, int minus)
+{
+	int		total;
+	long	tmp;
 
-// 	total = 0;
-// 	tmp = 0;
-// 	while ('0' <= *str && *str <= '9')
-// 	{
-// 		tmp = total * 10;
-// 		if ((minus * (tmp + (int)(*str - 48))) / (minus * (total + (int)(*str - 48))) != 10 && total != 0)
-// 		{
-// 			if (total >= 0)
-// 				return ((int)LONG_MAX);
-// 			else
-// 				return ((int)LONG_MIN);
-// 		}
-// 		total = minus * tmp + (int)(*str - '0');
-// 		str++;
-// 	}
-// 	return ((int)total);
-// }
+	total = 0;
+	tmp = 0;
+	while ('0' <= *str && *str <= '9')
+	{
+		tmp = total * 10;
+		if ((minus * (tmp + (int)(*str - 48))) / (minus * (total + (int)(*str - 48))) != 10 && total != 0)
+		{
+			if (total >= 0)
+				return ((int)LONG_MAX);
+			else
+				return ((int)LONG_MIN);
+		}
+		total = minus * tmp + (int)(*str - '0');
+		str++;
+	}
+	return ((int)total);
+}
 
-// int	ft_atoi(const char *str)
-// {
-// 	int		minus;
-// 	long	tmp;
+int	ft_atoi(const char *str)
+{
+	int		minus;
 
-// 	minus = 1;
-// 	while (*str == ' ' || *str == '\n' || *str == '\t' || *str == '\v'
-// 			|| *str == '\f' || *str == '\r')
-// 		str++;
-// 	if (*str == '-')
-// 		minus *= -1;
-// 	while (*str == '+' || *str == '-')
-// 		str++;
-// 	return (over_flow(str, minus));
-// }
+	minus = 1;
+	while (*str == ' ' || *str == '\n' || *str == '\t' || *str == '\v'
+			|| *str == '\f' || *str == '\r')
+		str++;
+	if (*str == '-')
+		minus *= -1;
+	while (*str == '+' || *str == '-')
+		str++;
+	return (over_flow(str, minus));
+}
 
 // #include <stdlib.h>
 // int main(void)
