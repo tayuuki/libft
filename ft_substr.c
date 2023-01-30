@@ -6,7 +6,7 @@
 // 	char			*d;
 // 	unsigned int	i;
 
-// 	if ((int)ft_strlen(s) < start)
+// 	if ((unsigned int)ft_strlen(s) < start)
 // 		return (ft_strdup(""));
 // 	d = (char *)malloc(sizeof(*s) * (len + 1));
 // 	if (d == NULL || s == NULL)
@@ -30,6 +30,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	j;
 	char	*str;
 
+	if (!s)
+		return (NULL);
 	str = (char*)malloc(sizeof(*s) * (len + 1));
 	if (!str)
 		return (NULL);

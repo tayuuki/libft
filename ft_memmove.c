@@ -3,13 +3,13 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned char	*d_cpy;
+	unsigned char		*d_cpy;
 	const unsigned char	*s_cpy;
 
+	if (!dst && !src)
+		return (NULL);
 	d_cpy = (unsigned char *)dst;
 	s_cpy = (const unsigned char *)src;
-	if (!d_cpy && !s_cpy)
-		return (NULL);
 	if (d_cpy < s_cpy)
 		return (ft_memcpy(dst, src, len));
 	else

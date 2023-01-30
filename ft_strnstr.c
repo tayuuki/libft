@@ -30,10 +30,10 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 
 // int	main(void)
 // {
-// 	// printf("%s\n", ft_strnstr("42Paris and 42Tokyo and 42Tokushima", "42T", 30));
-// 	// printf("%s\n", ft_strnstr("42Paris and 42Osaka and 42Hukushima", "42T", 30));
-// 	// printf("%s\n", strnstr("42Paris and 42Tokyo and 42Tokushima", "42T", 30));
-// 	// printf("%s\n", strnstr("42Paris and 42Osaka and 42Hukushima", "42T", 30));
+// 	printf("%s\n", ft_strnstr("42Paris and 42Tokyo and 42Tokushima", "42T", 30));
+// 	printf("%s\n", ft_strnstr("42Paris and 42Osaka and 42Hukushima", "42T", 30));
+// 	printf("%s\n", strnstr("42Paris and 42Tokyo and 42Tokushima", "42T", 30));
+// 	printf("%s\n", strnstr("42Paris and 42Osaka and 42Hukushima", "42T", 30));
 
 // 	char *s1 = "FF";
 // 	char *s2 = "see F your F return F now F";

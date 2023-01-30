@@ -24,9 +24,9 @@ OBJS = ft_strlen.o \
 		ft_tolower.o \
 		ft_calloc.o \
 		ft_strdup.o \
-		# ft_substr.o \
-		# ft_strjoin.o \
-		# ft_strtrim.o \
+		ft_substr.o \
+		ft_strjoin.o \
+		ft_strtrim.o \
 		# ft_split.o \
 		# ft_itoa.o \
 		# ft_strmapi.o \
