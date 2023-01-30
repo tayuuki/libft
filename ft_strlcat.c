@@ -26,21 +26,21 @@
 // 	return(dstlen + (strlen(src)));	/* count does not include NUL */
 // }
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	const char *odst = dst;
 	const char *osrc = src;
-	size_t n = dsize;
+	size_t n = size;
 	size_t dlen;
 
 	/* Find the end of dst and adjust bytes left but don't go past end. */
 	while (n-- != 0 && *dst != '\0')
 		dst++;
 	dlen = dst - odst;
-	n = dsize - dlen;
+	n = size - dlen;
 
 	if (n-- == 0)
-		return(dlen + strlen(src));
+		return(dlen + ft_strlen(src));
 	while (*src != '\0') {
 		if (n != 0) {
 			*dst++ = *src;
@@ -50,7 +50,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dsize)
 	}
 	*dst = '\0';
 
-	return(dlen + (src - osrc));	/* count does not include NUL */
+	return(dlen + (src - osrc));
 }
 
 // int	main()
