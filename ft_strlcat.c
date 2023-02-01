@@ -1,42 +1,15 @@
-#include<libc.h>
 #include "libft.h"
-
-// size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
-// {
-// 	size_t	n;
-// 	size_t	dstlen;
-
-// 	n = dstsize;
-// 	dstlen = 0;
-// 	while (n-- != 0 && dst[dstlen] != '\0')
-// 		dstlen++;
-// 	n = dstsize - dstlen;
-// 	if (n-- == 0)
-// 		return(dstlen + strlen(src));
-// 	while (*src != '\0')
-// 	{
-// 		if (n != 0)
-// 		{
-// 			*dst++ = *src;
-// 			n--;
-// 		}
-// 		src++;
-// 	}
-// 	*dst = '\0';
-// 	return(dstlen + (strlen(src)));	/* count does not include NUL */
-// }
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	const char *odst = dst;
-	const char *osrc = src;
+	char *d = dst;
+	const char *s = src;
 	size_t n = size;
 	size_t dlen;
 
-	/* Find the end of dst and adjust bytes left but don't go past end. */
 	while (n-- != 0 && *dst != '\0')
 		dst++;
-	dlen = dst - odst;
+	dlen = dst - d;
 	n = size - dlen;
 
 	if (n-- == 0)
@@ -50,7 +23,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	}
 	*dst = '\0';
 
-	return(dlen + (src - osrc));
+	return(dlen + (src - s));
 }
 
 // int	main()

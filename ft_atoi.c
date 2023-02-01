@@ -1,45 +1,46 @@
-#include <stdio.h>
 #include<limits.h>
 
-
-int	over_flow(const char *str, int minus)
+int over_flow(const char *str, int minus)
 {
-	int		total;
-	long	tmp;
+	unsigned long	total;
 
 	total = 0;
-	tmp = 0;
+	while (*str == '0')
+		str++;
 	while ('0' <= *str && *str <= '9')
 	{
-		tmp = total * 10;
-		if ((minus * (tmp + (int)(*str - 48))) / (minus * (total + (int)(*str - 48))) != 10 && total != 0)
-		{
-			if (total >= 0)
-				return ((int)LONG_MAX);
-			else
-				return ((int)LONG_MIN);
-		}
-		total = minus * tmp + (int)(*str - '0');
+		if (minus == 1 && total * 10 / 10 != total)
+			return ((int)LONG_MAX);
+		else if (minus == -1 && total * 10 / 10 != total)
+			return ((int)LONG_MIN);
+		total *= 10;
+		total += *str - '0';
 		str++;
+		if (minus == 1 && total > LONG_MAX)
+			return ((int)LONG_MAX);
+		else if (minus == -1 && total - 1 > LONG_MAX)
+			return ((int)LONG_MIN);
 	}
-	return ((int)total);
+	return ((int)(total * minus));
 }
 
-int	ft_atoi(const char *str)
+int	ft_atoi(char *str)
 {
 	int		minus;
 
 	minus = 1;
-	while (*str == ' ' || *str == '\n' || *str == '\t' || *str == '\v'
-			|| *str == '\f' || *str == '\r')
+	while (*str == 32 || (9 <= *str && *str <= 13))
 		str++;
-	if (*str == '-')
-		minus *= -1;
-	while (*str == '+' || *str == '-')
+	if (*str == '+' || *str == '-')
+	{
+		if (*str == '-')
+			minus *= -1;
 		str++;
+	}
 	return (over_flow(str, minus));
 }
 
+// #include <stdio.h>
 // #include <stdlib.h>
 // int main(void)
 // {
@@ -56,9 +57,9 @@ int	ft_atoi(const char *str)
 // 	char *str11 = "-9223372036854775807";
 // 	char *str12 = "2147483647";
 // 	char *str13 = "-2147483648";
-// 	// printf("=========str===========\n");
-// 	// printf("atoi : int型変数numの値は: %d\n", atoi(str));
-// 	// printf("ft_atoi : int型変数numの値は: %d\n", ft_atoi(str));
+// 	printf("=========str===========\n");
+// 	printf("atoi : int型変数numの値は: %d\n", atoi(str));
+// 	printf("ft_atoi : int型変数numの値は: %d\n", ft_atoi(str));
 // 	printf("=========str2===========\n");
 // 	printf("atoi : int型変数numの値は: %d\n", atoi(str2));
 // 	printf("ft_atoi : int型変数numの値は: %d\n", ft_atoi(str2));
