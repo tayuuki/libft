@@ -1,5 +1,4 @@
 #include "libft.h"
-// #include<libc.h>
 
 // char *ft_substr(char const *s, unsigned int start, size_t len)
 // {
@@ -24,16 +23,17 @@
 // 	return (d);	
 // }
 
+// MKOでます
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
 	size_t	j;
-	char	*str;
+	char	*d;
 
 	if (!s)
 		return (NULL);
-	str = (char*)malloc(sizeof(*s) * (len + 1));
-	if (!str)
+	d = (char*)malloc(sizeof(*s) * (len + 1));
+	if (!d)
 		return (NULL);
 	i = 0;
 	j = 0;
@@ -41,11 +41,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	{
 		if (i >= start && j < len)
 		{
-			str[j] = s[i];
+			d[j] = s[i];
 			j++;
 		}
 		i++;
 	}
-	str[j] = 0;
-	return (str);
+	d[j] = 0;
+	return (d);
 }
