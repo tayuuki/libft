@@ -1,9 +1,9 @@
-#include<libc.h>
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int				i;
-	int				tmp;
+	int	i;
+	int	tmp;
 
 	tmp = -1;
 	i = -1;

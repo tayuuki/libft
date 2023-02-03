@@ -24,13 +24,14 @@ char	*ft_strrev(char *tmp, int size, int minus)
 	str[i] = '\0';
 	return (str);
 }
+
 char	*ft_itoa(int n)
 {
 	char	str[12];
 	int		i;
 	int		minus;
 
-	if (n == -2147483648)
+	if (n == INT_MIN)
 		return (ft_strdup("-2147483648"));
 	ft_bzero(str, 12);
 	minus = 0;
@@ -63,10 +64,10 @@ return (ft_strrev(str, ft_strlen(str)+minus, minus));
 // 	printf("%s\n", ft_itoa(n3));
 // 	printf("%s\n", ft_itoa(n4));
 // 	printf("%s\n", ft_itoa(n5));
-	// ft_itoa(n1);
-	// ft_itoa(n2);
-	// ft_itoa(n3);
-	// ft_itoa(n4);
-	// ft_itoa(n5);
+// 	ft_itoa(n1);
+// 	ft_itoa(n2);
+// 	ft_itoa(n3);
+// 	ft_itoa(n4);
+// 	ft_itoa(n5);
 // 	return (0);
 // }

@@ -1,6 +1,18 @@
-#include<limits.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tayuuki <tayuuki@student.42tokyo.jp>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/04 01:21:46 by tayuuki           #+#    #+#             */
+/*   Updated: 2023/02/04 01:21:47 by tayuuki          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int over_flow(const char *str, int minus)
+#include "libft.h"
+
+int	over_flow(const char *str, int minus)
 {
 	unsigned long	total;
 
@@ -26,7 +38,7 @@ int over_flow(const char *str, int minus)
 
 int	ft_atoi(char *str)
 {
-	int		minus;
+	int	minus;
 
 	minus = 1;
 	while (*str == 32 || (9 <= *str && *str <= 13))

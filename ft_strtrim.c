@@ -17,13 +17,12 @@ int	charcheck(char c, char const *set)
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*str;
-	size_t	i;
 	size_t	start;
 	size_t	end;
 
-	start = 0;
 	if (!s1)
 		return (NULL);
+	start = 0;
 	while (s1[start] && charcheck(s1[start], set))
 		start++;
 	end = ft_strlen(s1);
@@ -32,9 +31,14 @@ char	*ft_strtrim(char const *s1, char const *set)
 	str = (char*)malloc(sizeof(*s1) * (end - start + 1));
 	if (!str)
 		return (NULL);
-	i = 0;
-	while (start < end)
-		str[i++] = s1[start++];
-	str[i] = 0;
+	ft_strlcpy(str, &s1[start], end - start + 1);
 	return (str);
 }
+
+// int main()
+// {
+// 	char *str = "abcba00abc11abcba";
+// 	char *set = "abc";
+// 	printf("%s", ft_strtrim(str, set));
+// 	return (0);
+// }

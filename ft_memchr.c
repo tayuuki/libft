@@ -7,7 +7,6 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	s_cpy = (unsigned char *)s;
 	while (n--)
 	{	
-
 		if (*s_cpy == (unsigned char)c)
 			return ((void *)s_cpy);
 		s_cpy++;
