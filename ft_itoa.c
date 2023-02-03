@@ -1,5 +1,16 @@
-#include"libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tayuuki <tayuuki@student.42tokyo.jp>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/04 01:55:25 by tayuuki           #+#    #+#             */
+/*   Updated: 2023/02/04 02:28:12 by tayuuki          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
+#include "libft.h"
 
 char	*ft_strrev(char *tmp, int size, int minus)
 {
@@ -10,7 +21,7 @@ char	*ft_strrev(char *tmp, int size, int minus)
 	str = (char *)malloc(sizeof(char) * (size + 1));
 	if (!str)
 		return (NULL);
-	ft_strlcpy(str, tmp, size+1);
+	ft_strlcpy(str, tmp, size + 1);
 	if (minus)
 	{
 		str[i] = '-';
@@ -49,7 +60,7 @@ char	*ft_itoa(int n)
 		n /= 10;
 		i++;
 	}
-return (ft_strrev(str, ft_strlen(str)+minus, minus));
+	return (ft_strrev(str, ft_strlen(str)+minus, minus));
 }
 
 // int	main(void)

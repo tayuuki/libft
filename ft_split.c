@@ -1,11 +1,38 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tayuuki <tayuuki@student.42tokyo.jp>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/04 01:58:48 by tayuuki           #+#    #+#             */
+/*   Updated: 2023/02/04 02:30:41 by tayuuki          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-size_t    count(char const *s, char c);
-
-size_t count_len(char const *s, char c)
+size_t	count(char const *s, char c)
 {
-	int i;
-	int len;
+	size_t	count;
+
+	count = 0;
+	while (*s != '\0')
+	{
+		while (*s != '\0' && *s == c)
+			s++;
+		if (*s != '\0' && *s != c)
+			count++;
+		while (*s != '\0' && *s != c)
+			s++;
+	}
+	return (count);
+}
+
+size_t	count_len(char const *s, char c)
+{
+	int	i;
+	int	len;
 
 	i = 0;
 	len = 0;
@@ -19,9 +46,9 @@ size_t count_len(char const *s, char c)
 
 char	**ft_split(char const *s, char c)
 {
-	char **d;
-	int i;
-	size_t len;
+	char	**d;
+	int		i;
+	size_t	len;
 
 	if (!s)
 		return (NULL);
@@ -41,53 +68,6 @@ char	**ft_split(char const *s, char c)
 	d[i] = 0;
 	return (d);
 }
-
-
-size_t    count(char const *s, char c)
-{
-    size_t    count;
-
-    count = 0;
-    while (*s != '\0')
-    {
-        while (*s != '\0' && *s == c)
-            s++;
-        if (*s != '\0' && *s != c)
-            count++;
-        while (*s != '\0' && *s != c)
-            s++;
-    }
-    return (count);
-}
-
-// char    **ft_split(char const *s, char c)
-// {
-//     size_t        len;
-//     size_t        i;
-//     char        **array;
-
-//     if (s == NULL)
-//         return (NULL);
-//     array = (char **) malloc((count(s, c) + 1) * sizeof(char *));
-//     if (array == NULL)
-//         return (NULL);
-//     i = 0;
-//     while (*s != '\0')
-//     {
-//         while (*s != '\0' && *s == c)
-//             s++;
-//         len = 0;
-//         while (*s != '\0' && *s != c)
-//         {
-//             s++;
-//             len++;
-//         }
-//         if (*(s - 1) != c)
-//             array[i++] = ft_substr(s - len, 0, len); //ft_substrのmalloc失敗したら？ -> 途中まで確保したら使いたい！！といえばOK？
-//     }
-//     array[i] = 0;
-//     return (array);
-// }
 
 // int main()
 // {

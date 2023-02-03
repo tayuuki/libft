@@ -6,7 +6,7 @@
 /*   By: tayuuki <tayuuki@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 01:21:46 by tayuuki           #+#    #+#             */
-/*   Updated: 2023/02/04 01:21:47 by tayuuki          ###   ########.fr       */
+/*   Updated: 2023/02/04 01:32:35 by tayuuki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int	over_flow(const char *str, int minus)
 	return ((int)(total * minus));
 }
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	int	minus;
 
