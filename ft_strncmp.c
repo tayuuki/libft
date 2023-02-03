@@ -6,7 +6,7 @@
 /*   By: tayuuki <tayuuki@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 02:08:47 by tayuuki           #+#    #+#             */
-/*   Updated: 2023/02/04 02:25:18 by tayuuki          ###   ########.fr       */
+/*   Updated: 2023/02/04 02:38:34 by tayuuki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,17 +35,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		return (-1);
 	return (0);
 }
-
-// int	main()
-// {
-// 	char str[] = "Hello";
-// 	char str1[] = "Hello";
-// 	char str2[] = "hello";
-// 	char str3[] = "HELLO";
-// 	char str4[] = "Hello1";
-// 	printf("%d\n", ft_strncmp(str, str1, 3)); // 0
-// 	printf("%d\n", ft_strncmp(str, str2, 3)); // -1
-// 	printf("%d\n", ft_strncmp(str, str3, 5)); // 1
-// 	printf("%d\n", ft_strncmp(str, str4, 2)); // 0
-// 	return(0);
-// }

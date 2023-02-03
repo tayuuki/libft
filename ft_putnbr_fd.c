@@ -6,7 +6,7 @@
 /*   By: tayuuki <tayuuki@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 01:57:42 by tayuuki           #+#    #+#             */
-/*   Updated: 2023/02/04 01:57:43 by tayuuki          ###   ########.fr       */
+/*   Updated: 2023/02/04 02:37:43 by tayuuki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,13 +38,3 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	write(fd, &list[i + 1], 10 - i);
 }
-
-// int main()
-// {
-// 	ft_putnbr_fd(0, 2);
-// 	ft_putnbr_fd(10, 2);
-// 	ft_putnbr_fd(2147483647, 2);
-// 	ft_putnbr_fd(-2147483648, 2);
-// 	ft_putnbr_fd(-42, 2);
-// 	return (0);
-// }

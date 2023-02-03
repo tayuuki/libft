@@ -6,7 +6,7 @@
 /*   By: tayuuki <tayuuki@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 01:55:25 by tayuuki           #+#    #+#             */
-/*   Updated: 2023/02/04 02:28:12 by tayuuki          ###   ########.fr       */
+/*   Updated: 2023/02/04 02:36:43 by tayuuki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,23 +62,3 @@ char	*ft_itoa(int n)
 	}
 	return (ft_strrev(str, ft_strlen(str)+minus, minus));
 }
-
-// int	main(void)
-// {
-// 	int n1 = -42;
-// 	int n2 = 42;
-// 	int n3 = -2147483648;
-// 	int n4 = 2147483647;
-// 	int n5 = 0;
-// 	printf("%s\n", ft_itoa(n1));
-// 	printf("%s\n", ft_itoa(n2));
-// 	printf("%s\n", ft_itoa(n3));
-// 	printf("%s\n", ft_itoa(n4));
-// 	printf("%s\n", ft_itoa(n5));
-// 	ft_itoa(n1);
-// 	ft_itoa(n2);
-// 	ft_itoa(n3);
-// 	ft_itoa(n4);
-// 	ft_itoa(n5);
-// 	return (0);
-// }

@@ -6,7 +6,7 @@
 /*   By: tayuuki <tayuuki@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 02:07:12 by tayuuki           #+#    #+#             */
-/*   Updated: 2023/02/04 02:30:20 by tayuuki          ###   ########.fr       */
+/*   Updated: 2023/02/04 02:38:30 by tayuuki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,18 +31,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str[i] = '\0';
 	return (str);
 }
-
-// char f(unsigned int i, char c)
-// {
-// 	char str;
-// 	str = c + 1;
-// 	return (str);
-// }
-
-// int main()
-// {
-// 	char str1[] = "abc";
-// 	char* str2;
-// 	str2 = ft_strmapi(str1, *f);
-// 	printf("%s\n", str2);
-// }

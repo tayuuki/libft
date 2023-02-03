@@ -6,7 +6,7 @@
 /*   By: tayuuki <tayuuki@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 01:58:48 by tayuuki           #+#    #+#             */
-/*   Updated: 2023/02/04 02:30:41 by tayuuki          ###   ########.fr       */
+/*   Updated: 2023/02/04 02:37:31 by tayuuki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,26 +68,3 @@ char	**ft_split(char const *s, char c)
 	d[i] = 0;
 	return (d);
 }
-
-// int main()
-// {
-// 	char *s1 = "   split       this for   me  !       ";
-// 	printf("%lu", count(s1, ' '));
-// 	char *s2 = "split  ||this|for|me|||||!|";
-// 	char c1 = ' ';
-// 	char c2 = '|';
-// 	char **d1;
-// 	char **d2;
-// 	d1 = ft_split(s1, c1);
-// 	d2 = ft_split(s2, c2);
-// 	printf("%s", d1[0]);
-// 	printf("%s", d2[0]);
-// 	return (0);
-// }
-
-// int main()
-// {
-// 	char *string = "     split       this for   me  !       ";
-// 	printf("%d", count_len(string, ' '));
-// 	return 0;
-// }

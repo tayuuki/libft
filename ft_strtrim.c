@@ -6,7 +6,7 @@
 /*   By: tayuuki <tayuuki@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 02:10:24 by tayuuki           #+#    #+#             */
-/*   Updated: 2023/02/04 02:26:39 by tayuuki          ###   ########.fr       */
+/*   Updated: 2023/02/04 02:38:48 by tayuuki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,11 +46,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ft_strlcpy(str, &s1[start], end - start + 1);
 	return (str);
 }
-
-// int main()
-// {
-// 	char *str = "abcba00abc11abcba";
-// 	char *set = "abc";
-// 	printf("%s", ft_strtrim(str, set));
-// 	return (0);
-// }

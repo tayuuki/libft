@@ -6,7 +6,7 @@
 /*   By: tayuuki <tayuuki@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 02:00:11 by tayuuki           #+#    #+#             */
-/*   Updated: 2023/02/04 02:00:26 by tayuuki          ###   ########.fr       */
+/*   Updated: 2023/02/04 02:37:59 by tayuuki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,13 +33,3 @@ char	*ft_strdup(const char *s1)
 	dest[i] = '\0';
 	return (dest);
 }
-
-// #include <stdio.h>
-// #include <string.h>
-// int	main(void)
-// {
-// 	char str[] = "Hello";
-// 	printf("%s\n", ft_strdup(str));
-// 	printf("%s\n", strdup(str));
-// 	return (0);
-// }

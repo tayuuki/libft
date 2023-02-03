@@ -6,7 +6,7 @@
 /*   By: tayuuki <tayuuki@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 02:09:42 by tayuuki           #+#    #+#             */
-/*   Updated: 2023/02/04 02:09:43 by tayuuki          ###   ########.fr       */
+/*   Updated: 2023/02/04 02:38:44 by tayuuki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,3 @@ char	*ft_strrchr(const char *s, int c)
 		return ((char *)&s[tmp]);
 	return (NULL);
 }
-
-// int	main()
-// {
-// 	printf("%s\n", strrchr("1234537", '3'));
-// 	printf("%s", strrchr("1234537", '\0'));
-// 	printf("%s\n", ft_strrchr("1234537", '3'));
-// 	printf("%s", ft_strrchr("1234537", '\0'));
-// 	return (0);
-// }

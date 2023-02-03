@@ -6,7 +6,7 @@
 /*   By: tayuuki <tayuuki@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 01:57:17 by tayuuki           #+#    #+#             */
-/*   Updated: 2023/02/04 02:24:26 by tayuuki          ###   ########.fr       */
+/*   Updated: 2023/02/04 02:37:13 by tayuuki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,3 @@ void	*ft_memset(void *b, int c, size_t len)
 	}
 	return (b);
 }
-
-// int main(void)
-// {
-// 	char str[] = "0123456789";
-// 	char str1[] = "0123456789";
-// 	ft_memset(str+2, '*', 5);
-// 	memset(str1+2, '*', 5);
-// 	printf("%s\n%s",str,str1);
-// 	return 0;
-// }

@@ -6,7 +6,7 @@
 /*   By: tayuuki <tayuuki@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 02:08:30 by tayuuki           #+#    #+#             */
-/*   Updated: 2023/02/04 02:08:31 by tayuuki          ###   ########.fr       */
+/*   Updated: 2023/02/04 02:38:19 by tayuuki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,3 @@ size_t	ft_strlen(const char *s)
 		i++;
 	return (i);
 }
-
-// int	main()
-// {
-// 	const char str[] = "Hello World!";
-// 	printf("%zu\n", ft_strlen(str));
-// 	return (0);
-// }
